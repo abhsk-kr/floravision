@@ -1,10 +1,10 @@
 import { PlantAnglonemaImage, playIcon, rightArrowIcon, RonnieReviewImage } from "@/assets";
-import PlantCard from "../cards/plant";
+import ClippedCard from "../cards/clipped";
 import Button from "../ui/button";
 import Card from "../cards/card";
 
 const HeroSection = () => (
-  <section className="mt-20 flex min-h-screen flex-col justify-between px-10 lg:flex-row">
+  <section className="mt-20 flex flex-col justify-between p-10 lg:flex-row">
     <div className="flex flex-col gap-15">
       <div className="lg:max-w-[40vw]">
         <h2 className="text-6xl font-semibold">Earth’s Exhale</h2>
@@ -12,12 +12,14 @@ const HeroSection = () => (
           "Earth Exhale" symbolizes the purity and vitality of the Earth's natural environment and
           its essential role in sustaining life.
         </p>
-        <div className="mt-3 flex items-center gap-4">
+        <div className="mt-3 flex gap-4">
           <Button className="px-6">Buy Now</Button>
-          <Button className="rounded-full! p-3">
-            <img src={playIcon} alt="play" className="size-4" />
-          </Button>
-          <p className="font-indieflower text-xl"> Live Demo...</p>
+          <div className="flex items-center gap-2">
+            <Button className="rounded-full! p-3">
+              <img src={playIcon} alt="play" className="size-4" />
+            </Button>
+            <p className="font-indieflower text-xl tracking-tighter"> Live Demo...</p>
+          </div>
         </div>
       </div>
 
@@ -38,20 +40,24 @@ const HeroSection = () => (
       </Card>
     </div>
     <div>
-      <PlantCard className="p-2">
-        <img src={PlantAnglonemaImage} alt="anglonema plant" className="size-70" />
+      <ClippedCard className="p-2">
+        <img
+          src={PlantAnglonemaImage}
+          alt="anglonema plant"
+          className="drop-shadow-plant size-70"
+        />
         <h6 className="text-sm">indoor Plant</h6>
         <div className="flex items-center justify-between">
           <h2 className="text-xl">Aglaonema plant</h2>
           <img src={rightArrowIcon} alt="swipe-right" className="size-3" />
         </div>
         <Button className="px-6">Buy Now</Button>
-        <div className="flex p-2 justify-center gap-1.5">
-          <span className="rounded-full size-1 bg-white w-5"></span>
-          <span className="rounded-full size-1 bg-white"></span>
-          <span className="rounded-full size-1 bg-white"></span>
+        <div className="flex justify-center gap-1.5 p-2">
+          <span className="size-1 w-5 rounded-full bg-white"></span>
+          <span className="size-1 rounded-full bg-white"></span>
+          <span className="size-1 rounded-full bg-white"></span>
         </div>
-      </PlantCard>
+      </ClippedCard>
     </div>
   </section>
 );

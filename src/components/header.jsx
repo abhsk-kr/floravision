@@ -17,7 +17,7 @@ const Header = () => (
           <img
             src={dropdownIcon}
             alt="dropdownIcon"
-            className="size-3 -rotate-180 group-hover:rotate-0 motion-safe:transition-transform motion-reduce:transition-none"
+            className="size-3 -rotate-180 group-hover:rotate-0 motion-safe:duration-300 motion-reduce:duration-[0ms]"
           />
         </div>
         <span className="block h-px w-0 rounded-full bg-white motion-safe:duration-300 motion-reduce:duration-[0ms] group-hover:w-full"></span>
