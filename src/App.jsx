@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import HeroSection from "@/components/sections/hero";
 import TrendSection from "./components/sections/trend";
 import TopSection from "./components/sections/top";
+import ReviewSection from "./components/sections/review";
 
 const App = () => (
   <div className="font-inter flex flex-col items-center bg-[#1A2217] text-white">
@@ -14,6 +15,7 @@ const App = () => (
     </div>
     <main className="container">
       <TopSection />
+      <ReviewSection />
     </main>
   </div>
 );
